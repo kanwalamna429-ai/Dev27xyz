@@ -1,0 +1,173 @@
+2026-06-25T12:08:30.676Z	Initializing build environment...
+2026-06-25T12:08:32.685Z	Success: Finished initializing build environment
+2026-06-25T12:08:33.336Z	Cloning repository...
+2026-06-25T12:08:35.248Z	No build output detected to cache. Skipping.
+2026-06-25T12:08:35.249Z	No dependencies detected to cache. Skipping.
+2026-06-25T12:08:35.250Z	Detected the following tools from environment: 
+2026-06-25T12:08:35.503Z	Executing user deploy command: npx wrangler deploy
+2026-06-25T12:08:30.676Z	Initializing build environment...
+2026-06-25T12:08:32.685Z	Success: Finished initializing build environment
+2026-06-25T12:08:33.336Z	Cloning repository...
+2026-06-25T12:08:35.248Z	No build output detected to cache. Skipping.
+2026-06-25T12:08:35.249Z	No dependencies detected to cache. Skipping.
+2026-06-25T12:08:35.250Z	Detected the following tools from environment: 
+2026-06-25T12:08:35.503Z	Executing user deploy command: npx wrangler deploy
+2026-06-25T12:08:38.030Z	npm warn exec The following package was not found and will be installed: wrangler@4.104.0
+2026-06-25T12:08:47.967Z	
+2026-06-25T12:08:47.967Z	 ⛅️ wrangler 4.104.0
+2026-06-25T12:08:47.967Z	────────────────────
+2026-06-25T12:08:48.130Z	
+2026-06-25T12:08:48.130Z	Detected Project Settings:
+2026-06-25T12:08:48.130Z	 - Worker Name: dev27xyz
+2026-06-25T12:08:48.131Z	 - Framework: Static
+2026-06-25T12:08:48.131Z	 - Output Directory: .
+2026-06-25T12:08:48.131Z	
+2026-06-25T12:08:48.131Z	? Do you want to modify these settings?
+2026-06-25T12:08:48.131Z	🤖 Using fallback value in non-interactive context: no
+2026-06-25T12:08:48.134Z	
+2026-06-25T12:08:48.134Z	📄 Create wrangler.jsonc:
+2026-06-25T12:08:48.134Z	  {
+2026-06-25T12:08:48.134Z	    "$schema": "node_modules/wrangler/config-schema.json",
+2026-06-25T12:08:48.135Z	    "name": "dev27xyz",
+2026-06-25T12:08:48.135Z	    "compatibility_date": "2026-06-25",
+2026-06-25T12:08:48.138Z	    "observability": {
+2026-06-25T12:08:48.138Z	      "enabled": true
+2026-06-25T12:08:48.138Z	    },
+2026-06-25T12:08:48.139Z	    "assets": {
+2026-06-25T12:08:48.139Z	      "directory": "."
+2026-06-25T12:08:48.139Z	    },
+2026-06-25T12:08:48.139Z	    "compatibility_flags": [
+2026-06-25T12:08:48.139Z	      "nodejs_compat"
+2026-06-25T12:08:48.140Z	    ]
+2026-06-25T12:08:48.140Z	  }
+2026-06-25T12:08:48.140Z	
+2026-06-25T12:08:48.140Z	? Proceed with setup?
+2026-06-25T12:08:48.140Z	🤖 Using fallback value in non-interactive context: yes
+2026-06-25T12:08:48.141Z	├ Adding Wrangler files to the .gitignore file
+2026-06-25T12:08:48.141Z	│ created .gitignore file
+2026-06-25T12:08:48.141Z	│
+2026-06-25T12:08:49.316Z	🌀 Building list of assets...
+2026-06-25T12:08:49.323Z	✨ Read 201 files from the assets directory /opt/buildhome/repo
+2026-06-25T12:08:49.377Z	🌀 Starting asset upload...
+2026-06-25T12:08:51.894Z	🌀 Found 113 new or modified static assets to upload. Proceeding with upload...
+2026-06-25T12:08:51.894Z	+ /attached_assets/_redirects_1782383991231
+2026-06-25T12:08:51.894Z	+ /.git/shallow
+2026-06-25T12:08:51.894Z	+ /.git/description
+2026-06-25T12:08:51.894Z	+ /.git/FETCH_HEAD
+2026-06-25T12:08:51.894Z	+ /.git/logs/refs/remotes/origin/main
+2026-06-25T12:08:51.894Z	+ /.git/objects/56/1296d4c596962b3089076765d4bd4b54d178f4
+2026-06-25T12:08:51.894Z	+ /attached_assets/favicon_1782383991523.svg
+2026-06-25T12:08:51.894Z	+ /attached_assets/_headers_1782383991141
+2026-06-25T12:08:51.894Z	+ /.git/config
+2026-06-25T12:08:51.894Z	+ /.git/hooks/pre-applypatch.sample
+2026-06-25T12:08:51.894Z	+ /.replit
+2026-06-25T12:08:51.894Z	+ /.git/objects/0a/eeeca5e19cc3e74d78bd6eaef410900b9de429
+2026-06-25T12:08:51.894Z	+ /.git/objects/09/c71d76e19f239bb055879f82da7be0e4d0cdae
+2026-06-25T12:08:51.894Z	+ /server.js
+2026-06-25T12:08:51.894Z	+ /.git/objects/c3/e235fb9726e007724791acf5b2966a5cb074ef
+2026-06-25T12:08:51.895Z	+ /.git/hooks/pre-commit.sample
+2026-06-25T12:08:51.895Z	+ /.git/hooks/sendemail-validate.sample
+2026-06-25T12:08:51.895Z	+ /.git/objects/e5/4c7b7545da9d8760d3afbbb85f701f8e11c39b
+2026-06-25T12:08:51.895Z	+ /.git/hooks/update.sample
+2026-06-25T12:08:51.895Z	+ /.git/objects/93/efc14bf44f4a9546f3a4a51114eb8058ca1302
+2026-06-25T12:08:51.895Z	+ /.git/objects/84/ace678ce7977cd72c4609ba3f61579901758a2
+2026-06-25T12:08:51.895Z	+ /.git/hooks/pre-rebase.sample
+2026-06-25T12:08:51.895Z	+ /.git/objects/ca/c9327f1606d825cacd6c7078af6a6ee6eed78e
+2026-06-25T12:08:51.895Z	+ /attached_assets/thank-you_1782383991822.html
+2026-06-25T12:08:51.895Z	+ /attached_assets/index_1782383991581.html
+2026-06-25T12:08:51.896Z	+ /index.html
+2026-06-25T12:08:51.896Z	+ /about.html
+2026-06-25T12:08:51.897Z	+ /product.html
+2026-06-25T12:08:51.897Z	+ /css/style.css
+2026-06-25T12:08:51.897Z	+ /.git/objects/75/4d9d03a844bfc8d93f96dc63db6ec1974ce247
+2026-06-25T12:08:51.897Z	+ /.git/objects/c4/ba0d1917abbbb8659787ece462a6dd84f73904
+2026-06-25T12:08:51.897Z	+ /img/rocket-launch-meter.jpg
+2026-06-25T12:08:51.898Z	+ /img/launch-progress-highway.jpg
+2026-06-25T12:08:51.899Z	+ /img/online-course-launch.jpg
+2026-06-25T12:08:51.899Z	+ /img/event-conference-coming-soon.jpg
+2026-06-25T12:08:51.899Z	+ /img/circular-launch-ring.jpg
+2026-06-25T12:08:51.899Z	+ /img/webinar-landing-page.jpg
+2026-06-25T12:08:51.899Z	+ /img/digital-command-center.jpg
+2026-06-25T12:08:51.899Z	+ /.git/HEAD
+2026-06-25T12:08:51.900Z	+ /.git/objects/32/5c1555c4c7337dc96be010da3e605d4550aaa5
+2026-06-25T12:08:51.900Z	+ /.gitignore
+2026-06-25T12:08:51.900Z	+ /.git/objects/be/70cbd91f563ea44b3f3aa234858b445bb871cd
+2026-06-25T12:08:51.900Z	+ /.git/logs/refs/heads/main
+2026-06-25T12:08:51.900Z	+ /.git/objects/d5/611c66930213627821e562a44c96650300f44f
+2026-06-25T12:08:51.902Z	+ /favicon.svg
+2026-06-25T12:08:51.902Z	+ /wrangler.jsonc
+2026-06-25T12:08:51.902Z	+ /.wrangler/tmp/deploy-mtP2CV/no-op-worker.js
+2026-06-25T12:08:51.902Z	+ /.git/objects/30/b84c38b2eed874c6bfc07a851ec29eee3aa3a5
+2026-06-25T12:08:51.902Z	+ /attached_assets/_1782383991287.replit
+2026-06-25T12:08:51.902Z	+ /.git/objects/1c/28ab36107357caf569400617f6ff044345d41b
+2026-06-25T12:08:51.903Z	+ /.git/hooks/commit-msg.sample
+2026-06-25T12:08:51.903Z	+ /.git/objects/28/fd941161fc49082284d83f9eda37a22cec9ff2
+2026-06-25T12:08:51.903Z	+ /.git/hooks/pre-push.sample
+2026-06-25T12:08:51.903Z	+ /attached_assets/Pasted--develop-a-static-blog-style-digital-product-download-w_1782349185212.txt
+2026-06-25T12:08:51.903Z	+ /.git/objects/a0/a26b5e9aaffad595e9b8dded84491893763ddf
+2026-06-25T12:08:51.903Z	+ /.git/objects/78/f4f604c878b0ad45af49654efa701981fca175
+2026-06-25T12:08:51.903Z	+ /.git/objects/5c/0d059a861cbd222eeb9fcad1c8511ad57744d3
+2026-06-25T12:08:51.903Z	+ /.git/objects/0e/a75cc771a19eab969b550970cf9a0442e461f7
+2026-06-25T12:08:51.903Z	+ /.git/objects/8e/d128dc2fe67f6825945ef92620cdcbab98ee73
+2026-06-25T12:08:51.903Z	+ /.git/objects/c5/425750d7669eab4f53290a7b4f6a88f1a25f65
+2026-06-25T12:08:51.903Z	+ /.git/index
+2026-06-25T12:08:51.903Z	+ /thank-you.html
+2026-06-25T12:08:51.903Z	+ /attached_assets/category_1782383991403.html
+2026-06-25T12:08:51.903Z	+ /category.html
+2026-06-25T12:08:51.903Z	+ /contact.html
+2026-06-25T12:08:51.904Z	+ /js/main.js
+2026-06-25T12:08:51.904Z	+ /.git/objects/62/ce2d2c35be472a1b7ef2ed8f5d7046c9174f4d
+2026-06-25T12:08:51.904Z	+ /.git/objects/e7/2cadbe6a5c844d8afc4e6b8d74c38914efefd1
+2026-06-25T12:08:51.904Z	+ /.git/objects/66/d34f3ebb578ffb956df1764893cc4fc95f7f31
+2026-06-25T12:08:51.905Z	+ /.git/objects/ff/84ec4fa4192f9319236bb1be7b452d8d5e0985
+2026-06-25T12:08:51.905Z	+ /.git/objects/81/45950b573f357133ded6dedd47ec0de0a66dd8
+2026-06-25T12:08:51.905Z	+ /img/agency-coming-soon.jpg
+2026-06-25T12:08:51.905Z	+ /.git/objects/9e/e983a4bd41523ae3ad5edfccef235ba72fe4d3
+2026-06-25T12:08:51.905Z	+ /.git/objects/d7/ea8c850072b99cce969303278c1dfd496d8666
+2026-06-25T12:08:51.905Z	+ /img/floating-islands.jpg
+2026-06-25T12:08:51.905Z	+ /img/construction-progress-tracker.jpg
+2026-06-25T12:08:51.905Z	+ /.git/objects/77/97f7c6a7356b0d451d11a49925df854c22e978
+2026-06-25T12:08:51.905Z	+ /.git/objects/9d/34669eaba9bcc32a8d490fce940e21401fd33e
+2026-06-25T12:08:51.905Z	+ /.git/objects/32/1ae99190abe15a57671323baafa7123c1daf65
+2026-06-25T12:08:51.905Z	+ /.git/logs/HEAD
+2026-06-25T12:08:51.905Z	+ /.git/hooks/post-update.sample
+2026-06-25T12:08:51.905Z	+ /.git/info/exclude
+2026-06-25T12:08:51.905Z	+ /.git/objects/c5/c7f35b4853bdcaf15f389a6b8784d163397e41
+2026-06-25T12:08:51.906Z	+ /.git/objects/8a/59ab4daad38f5fc2ca58b067832f8f7bb5f636
+2026-06-25T12:08:51.906Z	+ /.git/hooks/pre-merge-commit.sample
+2026-06-25T12:08:51.906Z	+ /.git/hooks/applypatch-msg.sample
+2026-06-25T12:08:51.906Z	+ /.git/hooks/pre-receive.sample
+2026-06-25T12:08:51.906Z	+ /.wrangler/tmp/deploy-mtP2CV/no-op-worker.js.map
+2026-06-25T12:08:51.906Z	+ /.git/objects/c2/5417977ee176e0a33358d400278104b2da7485
+2026-06-25T12:08:51.906Z	+ /.git/objects/35/4d4b83c75f61aa8a7fcce3c71736e22dc9f2f8
+2026-06-25T12:08:51.906Z	+ /.git/hooks/prepare-commit-msg.sample
+2026-06-25T12:08:51.906Z	+ /replit.md
+2026-06-25T12:08:51.907Z	+ /.git/hooks/push-to-checkout.sample
+2026-06-25T12:08:51.908Z	+ /js/ads.js
+2026-06-25T12:08:51.908Z	+ /.git/objects/1a/383a09ed44d7d52703825ff3babfc1e03d1467
+2026-06-25T12:08:51.908Z	+ /.git/objects/b0/92464bd4e2cd4bcbf90c52d763e97d9bf86503
+2026-06-25T12:08:51.908Z	+ /.git/hooks/fsmonitor-watchman.sample
+2026-06-25T12:08:51.908Z	+ /.git/objects/d8/c2e091405b55e88b790967ea7f5a756f533be9
+2026-06-25T12:08:51.909Z	+ /.git/objects/8a/0a9fdabc34a85cb8aede0f09c31f561ed6725d
+2026-06-25T12:08:51.909Z	+ /.git/objects/93/81897afaf09092ac3613809d5cf4f1e2b4e7b9
+2026-06-25T12:08:51.909Z	   (truncating changed assets log, set `WRANGLER_LOG=debug` environment variable to see full diff)
+2026-06-25T12:08:53.107Z	Uploaded 37 of 113 assets
+2026-06-25T12:08:53.214Z	Uploaded 75 of 113 assets
+2026-06-25T12:08:53.348Z	Uploaded 113 of 113 assets
+2026-06-25T12:08:53.350Z	✨ Success! Uploaded 113 files (18 already uploaded) (1.45 sec)
+2026-06-25T12:08:53.350Z	
+2026-06-25T12:08:53.352Z	Total Upload: 0.33 KiB / gzip: 0.24 KiB
+2026-06-25T12:08:53.487Z	
+2026-06-25T12:08:53.487Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2026-06-25T12:08:53.488Z	
+2026-06-25T12:08:53.555Z	✘ [ERROR] A request to the Cloudflare API (/accounts/ade93ff55c54857a6676a5e50ecac183/workers/scripts/dev27xyz/versions) failed.
+2026-06-25T12:08:53.556Z	
+2026-06-25T12:08:53.556Z	  Invalid _redirects configuration:
+2026-06-25T12:08:53.556Z	  Line 1: Infinite loop detected in this rule. This would cause a redirect to strip `.html` or `/index` and end up triggering this rule again. [code: 100324]
+2026-06-25T12:08:53.556Z	
+2026-06-25T12:08:53.556Z	  
+2026-06-25T12:08:53.556Z	  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+2026-06-25T12:08:53.556Z	
+2026-06-25T12:08:53.556Z	
+2026-06-25T12:08:53.570Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2026-06-25_12-08-47_510.log"
+2026-06-25T12:08:53.681Z	Failed: error occurred while running deploy command
