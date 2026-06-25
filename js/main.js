@@ -355,6 +355,36 @@ const DEV27 = {
     setMeta('meta[name="twitter:image"]', ogImage);
     setMeta('meta[name="description"]', product.description);
 
+    const shareUrl   = `https://dev27.xyz/product.html?id=${product.slug}`;
+    const shareTitle = encodeURIComponent(`${product.title} — Free Template by Dev27`);
+    const shareImg   = encodeURIComponent(`https://dev27.xyz/${product.featuredImage}`);
+    const shareEnc   = encodeURIComponent(shareUrl);
+    const setHref = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
+    setHref('shareX',        `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareEnc}`);
+    setHref('shareFacebook', `https://www.facebook.com/sharer/sharer.php?u=${shareEnc}`);
+    setHref('sharePinterest',`https://pinterest.com/pin/create/button/?url=${shareEnc}&media=${shareImg}&description=${shareTitle}`);
+    setHref('shareReddit',   `https://www.reddit.com/submit?url=${shareEnc}&title=${shareTitle}`);
+    setHref('shareWhatsapp', `https://wa.me/?text=${shareTitle}%20${shareEnc}`);
+    setHref('shareLinkedin', `https://www.linkedin.com/sharing/share-offsite/?url=${shareEnc}`);
+
+    const copyBtn = document.getElementById('shareCopy');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          const span = copyBtn.querySelector('span');
+          const icon = copyBtn.querySelector('i');
+          copyBtn.classList.add('copied');
+          if (span) span.textContent = 'Copied!';
+          if (icon) icon.className = 'fa-solid fa-check';
+          setTimeout(() => {
+            copyBtn.classList.remove('copied');
+            if (span) span.textContent = 'Copy Link';
+            if (icon) icon.className = 'fa-solid fa-link';
+          }, 2000);
+        });
+      });
+    }
+
     const featImg = document.getElementById('featuredImage');
     if (featImg) featImg.src = product.featuredImage;
 
