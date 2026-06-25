@@ -343,6 +343,18 @@ const DEV27 = {
 
     document.title = `${product.title} — Dev27`;
 
+    const pageUrl = `https://dev27.xyz/product.html?id=${product.slug}`;
+    const ogImage = `https://dev27.xyz/${product.featuredImage}`;
+    const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
+    setMeta('meta[property="og:url"]', pageUrl);
+    setMeta('meta[property="og:title"]', `${product.title} — Dev27`);
+    setMeta('meta[property="og:description"]', product.description);
+    setMeta('meta[property="og:image"]', ogImage);
+    setMeta('meta[name="twitter:title"]', `${product.title} — Dev27`);
+    setMeta('meta[name="twitter:description"]', product.description);
+    setMeta('meta[name="twitter:image"]', ogImage);
+    setMeta('meta[name="description"]', product.description);
+
     const featImg = document.getElementById('featuredImage');
     if (featImg) featImg.src = product.featuredImage;
 
