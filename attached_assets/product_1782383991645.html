@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading… — Dev27</title>
+  <meta name="description" content="Free professional template download by Dev27.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body data-page="product">
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="search" class="search-field" id="searchField" placeholder="Search templates…" autocomplete="off">
+      <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <p class="search-hint">Press <kbd>ESC</kbd> to close</p>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="width:18px;margin-right:6px;color:var(--primary)"></i>Home</a>
+    <a href="category.html?cat=html-templates" class="mobile-nav-link"><i class="fa-solid fa-code" style="width:18px;margin-right:6px;color:var(--primary)"></i>HTML Templates</a>
+    <a href="category.html?cat=coming-soon" class="mobile-nav-link"><i class="fa-solid fa-clock" style="width:18px;margin-right:6px;color:var(--primary)"></i>Coming Soon</a>
+    <a href="category.html?cat=landing-page" class="mobile-nav-link"><i class="fa-solid fa-rocket" style="width:18px;margin-right:6px;color:var(--primary)"></i>Landing Pages</a>
+    <a href="category.html?cat=email-templates" class="mobile-nav-link"><i class="fa-solid fa-envelope" style="width:18px;margin-right:6px;color:var(--primary)"></i>Email Templates</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info" style="width:18px;margin-right:6px;color:var(--primary)"></i>About</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane" style="width:18px;margin-right:6px;color:var(--primary)"></i>Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="category.html?cat=html-templates" class="nav-link">HTML Templates</a>
+      <a href="category.html?cat=coming-soon" class="nav-link">Coming Soon</a>
+      <a href="category.html?cat=landing-page" class="nav-link">Landing Pages</a>
+      <a href="category.html?cat=email-templates" class="nav-link">Email Templates</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" id="searchTrigger">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search…</span>
+        <span class="shortcut">⌘K</span>
+      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<div id="productContent">
+  <div class="container">
+    <!-- Breadcrumb -->
+    <div class="product-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#" id="breadcrumbCatLink"><span id="breadcrumbCat">Category</span></a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span data-product="breadcrumb" style="color:var(--text);font-weight:500">Loading…</span>
+      </nav>
+    </div>
+
+    <div class="site-layout" style="padding-top:0">
+      <!-- Main Content -->
+      <main>
+
+        <!-- Featured Image -->
+        <div class="product-featured-image">
+          <img id="featuredImage" src="" alt="" loading="eager">
+          <div style="position:absolute;top:12px;left:12px">
+            <span class="badge badge-primary" data-product="cat"></span>
+          </div>
+        </div>
+
+        <!-- Ad Slot: product-above — edit in js/ads.js -->
+        <div class="ad-block" data-ad-slot="product-above"></div>
+
+        <!-- Title + Actions -->
+        <div style="margin-top:24px">
+          <h1 style="font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--text);letter-spacing:-0.8px;margin-bottom:16px;line-height:1.2" data-product="title">Loading…</h1>
+
+          <!-- Action Bar -->
+          <div class="product-action-bar">
+            <a href="#" id="previewBtn" class="btn btn-preview" target="_blank" rel="noopener">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Preview
+            </a>
+            <button class="btn btn-jump" id="jumpBtn">
+              <i class="fa-solid fa-arrow-down"></i> Jump to Download
+            </button>
+          </div>
+        </div>
+
+        <!-- Meta Bar -->
+        <div class="product-meta-bar">
+          <div class="meta-item">
+            <i class="fa-solid fa-tag"></i>
+            <span class="meta-label">Category</span>
+            <span class="meta-value" data-product="cat"></span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fa-solid fa-code-branch"></i>
+            <span class="meta-label">Version</span>
+            <span class="meta-value" data-product="version"></span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fa-solid fa-weight-hanging"></i>
+            <span class="meta-label">Size</span>
+            <span class="meta-value" data-product="fileSize"></span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fa-solid fa-download"></i>
+            <span class="meta-label">Downloads</span>
+            <span class="meta-value" data-product="downloads"></span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fa-regular fa-calendar"></i>
+            <span class="meta-label">Updated</span>
+            <span class="meta-value" data-product="date"></span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fa-solid fa-user"></i>
+            <span class="meta-label">By</span>
+            <span class="meta-value">Dev27</span>
+          </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="article-content">
+
+          <h2>Overview</h2>
+          <p data-product="desc"></p>
+
+          <p>This template is built from the ground up with clean, semantic HTML5 markup and modern CSS practices. Every line of code is hand-written, well-commented, and easy to customize. Whether you're a freelancer, agency, or solo developer — this template gives you a professional head-start without writing boilerplate code.</p>
+
+          <!-- Ad Slot: product-in-article — edit in js/ads.js -->
+          <div class="ad-block in-content" data-ad-slot="product-in-article"></div>
+
+          <h2><i class="fa-solid fa-star" style="color:var(--primary);font-size:18px;margin-right:8px"></i>Features</h2>
+          <div class="feature-box">
+            <div class="feature-box-title"><i class="fa-solid fa-list-check"></i> What's Included</div>
+            <div class="feature-grid" id="featureList">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <h2>What You Get</h2>
+          <p>Upon download, you'll receive a clean ZIP archive containing all source files — fully organized, documented, and ready to deploy. Here's the exact structure:</p>
+          <pre><code>template/
+├── index.html          # Main HTML file
+├── css/
+│   ├── style.css       # Main styles
+│   └── responsive.css  # Media queries
+├── js/
+│   └── main.js         # Vanilla JS
+├── img/                # Images & assets
+└── README.md           # Setup guide</code></pre>
+
+          <h2>How to Use</h2>
+          <p>Getting started is simple:</p>
+          <ol>
+            <li><strong>Download</strong> the ZIP file using the button below.</li>
+            <li><strong>Extract</strong> the archive to your local machine.</li>
+            <li><strong>Open</strong> <code>index.html</code> in your browser to preview.</li>
+            <li><strong>Customize</strong> colors, fonts, and content to match your brand.</li>
+            <li><strong>Deploy</strong> to Netlify, Vercel, or Cloudflare Pages in minutes.</li>
+          </ol>
+
+          <blockquote>
+            All templates by Dev27 are free for personal and commercial use. Attribution appreciated but not required. See the README for full license details.
+          </blockquote>
+
+          <h2>Browser Compatibility</h2>
+          <p>Tested and verified across all modern browsers. The template works flawlessly on:</p>
+          <ul>
+            <li>Google Chrome 110+</li>
+            <li>Mozilla Firefox 105+</li>
+            <li>Safari 16+</li>
+            <li>Microsoft Edge 110+</li>
+            <li>Mobile Safari (iOS 15+)</li>
+            <li>Chrome Android</li>
+          </ul>
+
+          <!-- Ad Slot: product-below — edit in js/ads.js -->
+          <div class="ad-block in-content" data-ad-slot="product-below"></div>
+
+          <!-- Tags -->
+          <div class="tags-list" id="tagsList"></div>
+
+        </article>
+
+        <!-- Download Section -->
+        <div class="download-section" id="downloadSection">
+          <div class="download-section-inner">
+            <div class="download-icon"><i class="fa-solid fa-download"></i></div>
+            <h3 id="downloadTitle">Download Template</h3>
+            <p>100% free. No login required. Instant download.</p>
+            <div class="download-info-chips">
+              <div class="download-chip"><i class="fa-solid fa-file-zipper"></i> <span id="downloadType">ZIP</span></div>
+              <div class="download-chip"><i class="fa-solid fa-weight-hanging"></i> <span id="downloadSize">—</span></div>
+              <div class="download-chip"><i class="fa-solid fa-code-branch"></i> v<span id="downloadVersion">—</span></div>
+              <div class="download-chip"><i class="fa-solid fa-shield-halved"></i> Virus Free</div>
+            </div>
+            <button class="btn btn-download btn-download-full download-btn">
+              <i class="fa-solid fa-download"></i> Download Now — It's Free!
+            </button>
+            <p style="margin-top:16px;font-size:12px;opacity:0.5">By downloading you agree to our <a href="#" style="color:rgba(255,255,255,0.7);text-decoration:underline">Terms of Use</a></p>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+
+        <!-- Ad Slot: sidebar-top — edit in js/ads.js -->
+        <div class="widget ad-widget-wrap">
+          <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-top"></div>
+        </div>
+
+        <!-- Download Quick Box -->
+        <div class="widget" style="border-color:var(--green);border-width:2px">
+          <div class="widget-header" style="background:linear-gradient(135deg,#DCFCE7,#BBF7D0);border-bottom-color:#86EFAC">
+            <div class="widget-title-dot" style="background:var(--green)"></div>
+            <h3 class="widget-title" style="color:var(--green-dark)"><i class="fa-solid fa-download" style="margin-right:4px"></i> Quick Download</h3>
+          </div>
+          <div class="widget-body">
+            <div class="thankyou-product" style="margin-bottom:16px">
+              <img id="downloadThumb" src="" alt="" style="width:72px;height:52px;object-fit:cover;border-radius:6px;flex-shrink:0">
+              <div>
+                <h4 style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px" data-product="title">Loading…</h4>
+                <span style="font-size:11px;color:var(--text-muted)" data-product="fileSize"></span>
+              </div>
+            </div>
+            <button class="btn btn-download btn-download-full download-btn" style="font-size:14px;padding:12px">
+              <i class="fa-solid fa-download"></i> Download Free
+            </button>
+            <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:var(--text-muted)">
+              <i class="fa-solid fa-shield-halved" style="color:var(--green)"></i>
+              Safe &amp; verified · No signup needed
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Products -->
+        <div class="widget">
+          <div class="widget-header">
+            <div class="widget-title-dot"></div>
+            <h3 class="widget-title">Popular Templates</h3>
+          </div>
+          <div class="widget-body">
+            <div class="popular-list" id="popularList"></div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="widget">
+          <div class="widget-header">
+            <div class="widget-title-dot"></div>
+            <h3 class="widget-title">Follow Dev27</h3>
+          </div>
+          <div class="widget-body">
+            <div class="social-grid">
+              <a href="#" class="social-btn fb" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+              <a href="#" class="social-btn tw" target="_blank"><i class="fa-brands fa-x-twitter"></i> X</a>
+              <a href="#" class="social-btn li" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+              <a href="#" class="social-btn rd" target="_blank"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
+              <a href="#" class="social-btn ig" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              <a href="#" class="social-btn yt" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="widget">
+          <div class="widget-header">
+            <div class="widget-title-dot"></div>
+            <h3 class="widget-title">Newsletter</h3>
+          </div>
+          <div class="widget-body">
+            <form class="newsletter-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+              <p class="newsletter-desc">New templates every month. No spam.</p>
+              <input type="email" name="EMAIL" class="form-input" placeholder="your@email.com" required>
+              <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+              <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+              <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i> Subscribe Free</button>
+              <div class="newsletter-success"><i class="fa-solid fa-circle-check"></i> Subscribed!</div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Ad Slot: sidebar-bottom — edit in js/ads.js -->
+        <div class="widget ad-widget-wrap">
+          <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-bottom"></div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+          <span class="logo-text">Dev<span>27</span></span>
+        </a>
+        <p class="footer-desc">Free, high-quality developer templates for the modern web. Built with care by Dev27 for the developer community.</p>
+        <div class="footer-stats">
+          <div class="footer-stat">
+            <div class="f-stat-num" data-stat="downloads">46k<span>+</span></div>
+            <div class="f-stat-label">Downloads</div>
+          </div>
+          <div class="footer-stat" style="padding-left:24px;border-left:1px solid rgba(255,255,255,0.1)">
+            <div class="f-stat-num" data-stat="products">12</div>
+            <div class="f-stat-label">Templates</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="category.html?cat=html-templates">HTML Templates</a></li>
+          <li><a href="category.html?cat=coming-soon">Coming Soon</a></li>
+          <li><a href="category.html?cat=landing-page">Landing Pages</a></li>
+          <li><a href="category.html?cat=email-templates">Email Templates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Dev27</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">License Info</a></li>
+          <li><a href="#">Submit a Template</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+        <h4>Stay Updated</h4>
+        <p>New templates every month. Join developers who stay ahead.</p>
+        <form class="footer-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Email address" required>
+          <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+          <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2024 <a href="https://dev27.xyz">Dev27.xyz</a> · Made with <span>♥</span> by Dev27.xyz</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/ads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

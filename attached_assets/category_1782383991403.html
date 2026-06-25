@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates — Dev27</title>
+  <meta name="description" content="Browse free developer templates by category on Dev27.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body data-page="category">
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="search" class="search-field" id="searchField" placeholder="Search templates…" autocomplete="off">
+      <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <p class="search-hint">Press <kbd>ESC</kbd> to close</p>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="width:18px;margin-right:6px;color:var(--primary)"></i>Home</a>
+    <a href="category.html?cat=html-templates" class="mobile-nav-link"><i class="fa-solid fa-code" style="width:18px;margin-right:6px;color:var(--primary)"></i>HTML Templates</a>
+    <a href="category.html?cat=coming-soon" class="mobile-nav-link"><i class="fa-solid fa-clock" style="width:18px;margin-right:6px;color:var(--primary)"></i>Coming Soon</a>
+    <a href="category.html?cat=landing-page" class="mobile-nav-link"><i class="fa-solid fa-rocket" style="width:18px;margin-right:6px;color:var(--primary)"></i>Landing Pages</a>
+    <a href="category.html?cat=email-templates" class="mobile-nav-link"><i class="fa-solid fa-envelope" style="width:18px;margin-right:6px;color:var(--primary)"></i>Email Templates</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info" style="width:18px;margin-right:6px;color:var(--primary)"></i>About</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane" style="width:18px;margin-right:6px;color:var(--primary)"></i>Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="category.html?cat=html-templates" class="nav-link">HTML Templates</a>
+      <a href="category.html?cat=coming-soon" class="nav-link">Coming Soon</a>
+      <a href="category.html?cat=landing-page" class="nav-link">Landing Pages</a>
+      <a href="category.html?cat=email-templates" class="nav-link">Email Templates</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" id="searchTrigger">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search…</span>
+        <span class="shortcut">⌘K</span>
+      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Category Header -->
+<div class="container">
+  <div class="cat-header">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span style="color:var(--text);font-weight:500" id="catTitle">Templates</span>
+    </nav>
+    <div class="cat-banner">
+      <div class="cat-icon" id="catIcon"><i class="fa-solid fa-code"></i></div>
+      <div class="cat-info">
+        <h1 id="catTitle">Category</h1>
+        <p id="catDesc">Browse our free developer templates.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layout -->
+  <div class="site-layout" style="padding-top:0">
+
+    <main>
+      <!-- Ad Slot: category-banner — edit in js/ads.js -->
+      <div class="ad-block" style="margin-bottom:24px" data-ad-slot="category-banner"></div>
+
+      <div class="grid-header">
+        <h2 class="grid-title">Templates <span id="gridCount"></span></h2>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <div class="empty-state" style="grid-column:1/-1">
+          <div class="empty-state-icon"><i class="fa-solid fa-spinner fa-spin"></i></div>
+          <h3>Loading…</h3>
+        </div>
+      </div>
+
+      <!-- Ad Slot: category-mid — edit in js/ads.js -->
+      <div class="ad-block in-content" data-ad-slot="category-mid"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </main>
+
+    <aside class="sidebar">
+      <!-- Ad Slot: sidebar-top — edit in js/ads.js -->
+      <div class="widget ad-widget-wrap">
+        <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-top"></div>
+      </div>
+
+      <!-- Categories Widget -->
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Browse Categories</h3>
+        </div>
+        <div class="widget-body" style="padding:12px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <a href="category.html?cat=html-templates" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);transition:var(--transition);color:var(--text);font-size:14px;font-weight:500" onmouseover="this.style.background='var(--primary-bg)';this.style.color='var(--primary)'" onmouseout="this.style.background='';this.style.color='var(--text)'">
+              <i class="fa-solid fa-code" style="color:var(--primary);width:16px;text-align:center"></i> HTML Templates
+            </a>
+            <a href="category.html?cat=coming-soon" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);transition:var(--transition);color:var(--text);font-size:14px;font-weight:500" onmouseover="this.style.background='var(--primary-bg)';this.style.color='var(--primary)'" onmouseout="this.style.background='';this.style.color='var(--text)'">
+              <i class="fa-solid fa-clock" style="color:var(--primary);width:16px;text-align:center"></i> Coming Soon Pages
+            </a>
+            <a href="category.html?cat=landing-page" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);transition:var(--transition);color:var(--text);font-size:14px;font-weight:500" onmouseover="this.style.background='var(--primary-bg)';this.style.color='var(--primary)'" onmouseout="this.style.background='';this.style.color='var(--text)'">
+              <i class="fa-solid fa-rocket" style="color:var(--primary);width:16px;text-align:center"></i> Landing Pages
+            </a>
+            <a href="category.html?cat=email-templates" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);transition:var(--transition);color:var(--text);font-size:14px;font-weight:500" onmouseover="this.style.background='var(--primary-bg)';this.style.color='var(--primary)'" onmouseover="this.style.background='var(--primary-bg)';this.style.color='var(--primary)'" onmouseout="this.style.background='';this.style.color='var(--text)'">
+              <i class="fa-solid fa-envelope" style="color:var(--primary);width:16px;text-align:center"></i> Email Templates
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Popular Templates</h3>
+        </div>
+        <div class="widget-body">
+          <div class="popular-list" id="popularList"></div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Follow Dev27</h3>
+        </div>
+        <div class="widget-body">
+          <div class="social-grid">
+            <a href="#" class="social-btn fb" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="social-btn tw" target="_blank"><i class="fa-brands fa-x-twitter"></i> X</a>
+            <a href="#" class="social-btn li" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            <a href="#" class="social-btn rd" target="_blank"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
+            <a href="#" class="social-btn ig" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn yt" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Newsletter</h3>
+        </div>
+        <div class="widget-body">
+          <form class="newsletter-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+            <p class="newsletter-desc">Get new templates in your inbox. No spam.</p>
+            <input type="email" name="EMAIL" class="form-input" placeholder="your@email.com" required>
+            <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+            <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+            <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i> Subscribe Free</button>
+            <div class="newsletter-success"><i class="fa-solid fa-circle-check"></i> Subscribed!</div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Ad Slot: sidebar-bottom — edit in js/ads.js -->
+      <div class="widget ad-widget-wrap">
+        <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-bottom"></div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+          <span class="logo-text">Dev<span>27</span></span>
+        </a>
+        <p class="footer-desc">Free, high-quality developer templates for the modern web. Built with care by Dev27 for the developer community.</p>
+        <div class="footer-stats">
+          <div class="footer-stat">
+            <div class="f-stat-num" data-stat="downloads">46k<span>+</span></div>
+            <div class="f-stat-label">Downloads</div>
+          </div>
+          <div class="footer-stat" style="padding-left:24px;border-left:1px solid rgba(255,255,255,0.1)">
+            <div class="f-stat-num" data-stat="products">12</div>
+            <div class="f-stat-label">Templates</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="category.html?cat=html-templates">HTML Templates</a></li>
+          <li><a href="category.html?cat=coming-soon">Coming Soon</a></li>
+          <li><a href="category.html?cat=landing-page">Landing Pages</a></li>
+          <li><a href="category.html?cat=email-templates">Email Templates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Dev27</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">License Info</a></li>
+          <li><a href="#">Submit a Template</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+        <h4>Stay Updated</h4>
+        <p>New templates every month. Join developers who stay ahead.</p>
+        <form class="footer-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Email address" required>
+          <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+          <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2024 <a href="https://dev27.xyz">Dev27.xyz</a> · Made with <span>♥</span> by Dev27.xyz</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/ads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Dev27 — Get in Touch</title>
+  <meta name="description" content="Contact Dev27 — get help with templates, suggest ideas, or just say hello.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body data-page="contact">
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="search" class="search-field" id="searchField" placeholder="Search templates…" autocomplete="off">
+      <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <p class="search-hint">Press <kbd>ESC</kbd> to close</p>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="width:18px;margin-right:6px;color:var(--primary)"></i>Home</a>
+    <a href="category.html?cat=html-templates" class="mobile-nav-link"><i class="fa-solid fa-code" style="width:18px;margin-right:6px;color:var(--primary)"></i>HTML Templates</a>
+    <a href="category.html?cat=coming-soon" class="mobile-nav-link"><i class="fa-solid fa-clock" style="width:18px;margin-right:6px;color:var(--primary)"></i>Coming Soon</a>
+    <a href="category.html?cat=landing-page" class="mobile-nav-link"><i class="fa-solid fa-rocket" style="width:18px;margin-right:6px;color:var(--primary)"></i>Landing Pages</a>
+    <a href="category.html?cat=email-templates" class="mobile-nav-link"><i class="fa-solid fa-envelope" style="width:18px;margin-right:6px;color:var(--primary)"></i>Email Templates</a>
+    <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-circle-info" style="width:18px;margin-right:6px;color:var(--primary)"></i>About</a>
+    <a href="contact.html" class="mobile-nav-link active"><i class="fa-solid fa-paper-plane" style="width:18px;margin-right:6px;color:var(--primary)"></i>Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="category.html?cat=html-templates" class="nav-link">HTML Templates</a>
+      <a href="category.html?cat=coming-soon" class="nav-link">Coming Soon</a>
+      <a href="category.html?cat=landing-page" class="nav-link">Landing Pages</a>
+      <a href="category.html?cat=email-templates" class="nav-link">Email Templates</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" id="searchTrigger">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search…</span>
+        <span class="shortcut">⌘K</span>
+      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="hero-tag" style="justify-content:center;margin-bottom:20px"><i class="fa-solid fa-paper-plane"></i> Get in Touch</div>
+    <h1>Say Hello ✉️</h1>
+    <p>Have a question, a template idea, a bug report, or just want to chat? I'd love to hear from you. I read every message.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Form -->
+      <div>
+        <div class="contact-form-card">
+          <h2>Send a Message</h2>
+          <p>Fill out the form below and I'll get back to you as soon as possible — usually within 24 hours.</p>
+
+          <form id="contactForm" action="https://formsubmit.co/YOUR_GMAIL_HERE@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from Dev27.xyz contact form">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thank-you.html">
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" name="name" class="form-input-full" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" class="form-input-full" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactSubject">Subject *</label>
+              <select id="contactSubject" name="subject" class="form-input-full" required>
+                <option value="">Select a subject…</option>
+                <option value="Template Support">Template Support</option>
+                <option value="Bug Report">Bug Report</option>
+                <option value="Template Request">Template Request</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Advertising">Advertising Inquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" class="form-input-full form-textarea" placeholder="Tell me what's on your mind…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-send">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check" style="font-size:20px;margin-bottom:6px;display:block"></i>
+              Message sent! I'll get back to you soon. 🎉
+            </div>
+          </form>
+        </div>
+
+        <!-- Ad Slot: contact-banner — edit in js/ads.js -->
+        <div class="ad-block" style="margin-top:24px" data-ad-slot="contact-banner"></div>
+      </div>
+
+      <!-- Sidebar Info -->
+      <div class="contact-sidebar">
+
+        <!-- Contact Info -->
+        <div class="contact-info-card">
+          <h3>Contact Details</h3>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-item-text">
+              <label>Email</label>
+              <p>hello@dev27.xyz</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="contact-item-text">
+              <label>Website</label>
+              <p>dev27.xyz</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="contact-item-text">
+              <label>Response Time</label>
+              <p>Usually within 24 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links Card -->
+        <div class="contact-info-card">
+          <h3>Find Me Online</h3>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <a href="#" class="social-btn fb" style="text-decoration:none;justify-content:flex-start" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="social-btn tw" style="text-decoration:none;justify-content:flex-start" target="_blank"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+            <a href="#" class="social-btn li" style="text-decoration:none;justify-content:flex-start" target="_blank"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            <a href="#" class="social-btn rd" style="text-decoration:none;justify-content:flex-start" target="_blank"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
+            <a href="#" class="social-btn yt" style="text-decoration:none;justify-content:flex-start" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+
+        <!-- FAQ mini -->
+        <div class="contact-info-card">
+          <h3>Quick Answers</h3>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Are the templates really free?</p>
+              <p style="font-size:13px;color:var(--text-muted)">Yes, 100% free — personal &amp; commercial use included.</p>
+            </div>
+            <div style="border-top:1px solid var(--border);padding-top:14px">
+              <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Can I modify the templates?</p>
+              <p style="font-size:13px;color:var(--text-muted)">Absolutely. Edit, customize, and make them your own.</p>
+            </div>
+            <div style="border-top:1px solid var(--border);padding-top:14px">
+              <p style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">Do I need to credit Dev27?</p>
+              <p style="font-size:13px;color:var(--text-muted)">Attribution is appreciated but not required.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Instagram Widget -->
+    <div style="margin-top:48px">
+      <div class="instagram-widget">
+        <div class="ig-icon"><i class="fa-brands fa-instagram"></i></div>
+        <h3>Follow on Instagram</h3>
+        <p>Follow @dev27.xyz on Instagram for template previews, design tips, and behind-the-scenes of what's coming next. Join the community of developers and designers who build better.</p>
+        <a href="https://instagram.com/dev27.xyz" class="btn-instagram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i> Follow @dev27.xyz
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+          <span class="logo-text">Dev<span>27</span></span>
+        </a>
+        <p class="footer-desc">Free, high-quality developer templates for the modern web. Built with care by Dev27 for the developer community.</p>
+        <div class="footer-stats">
+          <div class="footer-stat">
+            <div class="f-stat-num" data-stat="downloads">46k<span>+</span></div>
+            <div class="f-stat-label">Downloads</div>
+          </div>
+          <div class="footer-stat" style="padding-left:24px;border-left:1px solid rgba(255,255,255,0.1)">
+            <div class="f-stat-num" data-stat="products">12</div>
+            <div class="f-stat-label">Templates</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="category.html?cat=html-templates">HTML Templates</a></li>
+          <li><a href="category.html?cat=coming-soon">Coming Soon</a></li>
+          <li><a href="category.html?cat=landing-page">Landing Pages</a></li>
+          <li><a href="category.html?cat=email-templates">Email Templates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Dev27</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">License Info</a></li>
+          <li><a href="#">Submit a Template</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+        <h4>Stay Updated</h4>
+        <p>New templates every month. Join developers who stay ahead.</p>
+        <form class="footer-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Email address" required>
+          <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+          <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2024 <a href="https://dev27.xyz">Dev27.xyz</a> · Made with <span>♥</span> by Dev27.xyz</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/ads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

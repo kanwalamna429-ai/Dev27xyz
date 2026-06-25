@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dev27 — Free Developer Templates & Themes</title>
+  <meta name="description" content="Learn about Dev27 — the developer behind free HTML templates, landing pages, and email templates for the web community.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body data-page="about">
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="search" class="search-field" id="searchField" placeholder="Search templates…" autocomplete="off">
+      <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <p class="search-hint">Press <kbd>ESC</kbd> to close</p>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <button class="mobile-nav-close" id="mobileClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house" style="width:18px;margin-right:6px;color:var(--primary)"></i>Home</a>
+    <a href="category.html?cat=html-templates" class="mobile-nav-link"><i class="fa-solid fa-code" style="width:18px;margin-right:6px;color:var(--primary)"></i>HTML Templates</a>
+    <a href="category.html?cat=coming-soon" class="mobile-nav-link"><i class="fa-solid fa-clock" style="width:18px;margin-right:6px;color:var(--primary)"></i>Coming Soon</a>
+    <a href="category.html?cat=landing-page" class="mobile-nav-link"><i class="fa-solid fa-rocket" style="width:18px;margin-right:6px;color:var(--primary)"></i>Landing Pages</a>
+    <a href="category.html?cat=email-templates" class="mobile-nav-link"><i class="fa-solid fa-envelope" style="width:18px;margin-right:6px;color:var(--primary)"></i>Email Templates</a>
+    <a href="about.html" class="mobile-nav-link active"><i class="fa-solid fa-circle-info" style="width:18px;margin-right:6px;color:var(--primary)"></i>About</a>
+    <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane" style="width:18px;margin-right:6px;color:var(--primary)"></i>Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+      <span class="logo-text">Dev<span>27</span></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="category.html?cat=html-templates" class="nav-link">HTML Templates</a>
+      <a href="category.html?cat=coming-soon" class="nav-link">Coming Soon</a>
+      <a href="category.html?cat=landing-page" class="nav-link">Landing Pages</a>
+      <a href="category.html?cat=email-templates" class="nav-link">Email Templates</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-trigger" id="searchTrigger">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search…</span>
+        <span class="shortcut">⌘K</span>
+      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="hero-tag" style="margin-bottom:20px"><i class="fa-solid fa-user-astronaut"></i> About Dev27</div>
+    <h1>Hi, I'm Dev27 👋</h1>
+    <p>A developer and designer building free, high-quality templates for the global web community — one clean codebase at a time.</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <span style="color:#6BCB77">const</span> dev27 = {<br>
+        &nbsp;&nbsp;name: <span style="color:#FFD166">'Dev27'</span>,<br>
+        &nbsp;&nbsp;role: <span style="color:#FFD166">'Frontend Developer'</span>,<br>
+        &nbsp;&nbsp;location: <span style="color:#FFD166">'Internet 🌐'</span>,<br>
+        &nbsp;&nbsp;passion: <span style="color:#FFD166">'Clean Code'</span>,<br>
+        &nbsp;&nbsp;skills: [<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FFD166">'HTML5'</span>, <span style="color:#FFD166">'CSS3'</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FFD166">'Vanilla JS'</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#FFD166">'UI Design'</span><br>
+        &nbsp;&nbsp;],<br>
+        &nbsp;&nbsp;gives: <span style="color:#FFD166">'free templates'</span>,<br>
+        &nbsp;&nbsp;coffee: <span style="color:#FF6B6B">true</span><br>
+        };<br><br>
+        <span style="color:#6BCB77">module</span>.<span style="color:#6BCB77">exports</span> = dev27;
+        <br><br>
+        <span style="color:rgba(255,255,255,0.3)">// Crafted with ♥ since 2020</span>
+      </div>
+      <div class="about-text">
+        <h2>Building the Web,<br>One Template at a Time</h2>
+        <p>Dev27 is a passion project built by a frontend developer with a love for clean design and even cleaner code. What started as a personal collection of UI experiments grew into a library of free, production-ready templates used by thousands of developers worldwide.</p>
+        <p>Every template on Dev27 is hand-crafted — no generators, no bloated frameworks, no hidden paywalls. Just solid HTML, CSS, and Vanilla JS that you can open, customize, and ship.</p>
+        <div class="about-vals">
+          <div class="about-val">
+            <div class="about-val-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h4>Zero Dependencies</h4>
+              <p>No jQuery. No bloat. Every template is built with pure HTML, CSS, and Vanilla JS for maximum performance.</p>
+            </div>
+          </div>
+          <div class="about-val">
+            <div class="about-val-icon"><i class="fa-solid fa-lock-open"></i></div>
+            <div>
+              <h4>Always Free</h4>
+              <p>Free for personal and commercial use. No license fees, no paywalls, no surprises. Download and build.</p>
+            </div>
+          </div>
+          <div class="about-val">
+            <div class="about-val-icon"><i class="fa-solid fa-paintbrush"></i></div>
+            <div>
+              <h4>Design-First Quality</h4>
+              <p>Every template is crafted with UI/UX principles in mind — not just functional, but genuinely beautiful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section style="background:var(--coal);padding:64px 0">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="hero-tag" style="justify-content:center;margin-bottom:16px"><i class="fa-solid fa-chart-line"></i> By the Numbers</div>
+      <h2 style="font-size:36px;font-weight:800;color:white;letter-spacing:-1px">Dev27 in Numbers</h2>
+      <p style="color:rgba(255,255,255,0.5);margin-top:10px;font-size:16px">Real numbers. Real downloads. Real developers.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <div style="text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:32px">
+        <div style="font-size:42px;font-weight:900;color:var(--primary);font-family:var(--font-mono);letter-spacing:-2px" data-stat="downloads">46k+</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:8px;text-transform:uppercase;letter-spacing:0.8px;font-size:12px;font-weight:600">Total Downloads</div>
+      </div>
+      <div style="text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:32px">
+        <div style="font-size:42px;font-weight:900;color:var(--green);font-family:var(--font-mono);letter-spacing:-2px" data-stat="products">12+</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:8px;text-transform:uppercase;letter-spacing:0.8px;font-size:12px;font-weight:600">Free Templates</div>
+      </div>
+      <div style="text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:32px">
+        <div style="font-size:42px;font-weight:900;color:white;font-family:var(--font-mono);letter-spacing:-2px">4</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:8px;text-transform:uppercase;letter-spacing:0.8px;font-size:12px;font-weight:600">Categories</div>
+      </div>
+      <div style="text-align:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:32px">
+        <div style="font-size:42px;font-weight:900;color:#FFD166;font-family:var(--font-mono);letter-spacing:-2px">100%</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:8px;text-transform:uppercase;letter-spacing:0.8px;font-size:12px;font-weight:600">Free Forever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:80px 0;background:var(--bg)">
+  <div class="container" style="text-align:center">
+    <h2 style="font-size:36px;font-weight:800;color:var(--text);letter-spacing:-1px;margin-bottom:14px">Ready to build something great?</h2>
+    <p style="font-size:17px;color:var(--text-muted);margin-bottom:32px">Browse all free templates and find your perfect starting point.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="index.html" class="btn btn-jump" style="text-decoration:none">
+        <i class="fa-solid fa-grid-2"></i> Browse Templates
+      </a>
+      <a href="contact.html" class="btn btn-preview" style="text-decoration:none">
+        <i class="fa-solid fa-paper-plane"></i> Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+          <span class="logo-text">Dev<span>27</span></span>
+        </a>
+        <p class="footer-desc">Free, high-quality developer templates for the modern web. Built with care by Dev27 for the developer community.</p>
+        <div class="footer-stats">
+          <div class="footer-stat">
+            <div class="f-stat-num" data-stat="downloads">46k<span>+</span></div>
+            <div class="f-stat-label">Downloads</div>
+          </div>
+          <div class="footer-stat" style="padding-left:24px;border-left:1px solid rgba(255,255,255,0.1)">
+            <div class="f-stat-num" data-stat="products">12</div>
+            <div class="f-stat-label">Templates</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul class="footer-links">
+          <li><a href="category.html?cat=html-templates">HTML Templates</a></li>
+          <li><a href="category.html?cat=coming-soon">Coming Soon</a></li>
+          <li><a href="category.html?cat=landing-page">Landing Pages</a></li>
+          <li><a href="category.html?cat=email-templates">Email Templates</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Dev27</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">License Info</a></li>
+          <li><a href="#">Submit a Template</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter footer-col">
+        <h4>Stay Updated</h4>
+        <p>New templates every month. Join developers who stay ahead.</p>
+        <form class="footer-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+          <input type="email" name="EMAIL" placeholder="Email address" required>
+          <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+          <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i> Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2024 <a href="https://dev27.xyz">Dev27.xyz</a> · Made with <span>♥</span> by Dev27.xyz</div>
+      <div class="footer-bottom-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/ads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
