@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you.html
+Disallow: /attached_assets/
+Disallow: /.wrangler/
+Disallow: /data/
+
+Sitemap: https://dev27.xyz/sitemap.xml
