@@ -8,17 +8,21 @@ const AD2 = `<script>atOptions={'key':'678e6675a80a24787923840118e09116','format
 const DEV27_ADS = {
 
   slots: {
-    'banner-top':         { enabled: true, label: 'Advertisement', pages: ['home'],      code: AD1 },
-    'banner-mid':         { enabled: true, label: 'Advertisement', pages: ['home'],      code: AD1 },
-    'sidebar-top':        { enabled: true, label: 'Sponsored',     pages: [],            code: AD2 },
-    'sidebar-bottom':     { enabled: true, label: 'Sponsored',     pages: [],            code: AD2 },
-    'product-above':      { enabled: true, label: 'Advertisement', pages: ['product'],   code: AD1 },
-    'product-in-article': { enabled: true, label: 'Advertisement', pages: ['product'],   code: AD1 },
-    'product-below':      { enabled: true, label: 'Advertisement', pages: ['product'],   code: AD1 },
-    'category-banner':    { enabled: true, label: 'Advertisement', pages: ['category'],  code: AD1 },
-    'category-mid':       { enabled: true, label: 'Advertisement', pages: ['category'],  code: AD1 },
-    'thankyou-banner':    { enabled: true, label: 'Advertisement', pages: ['thankyou'],  code: AD2 },
-    'contact-banner':     { enabled: true, label: 'Advertisement', pages: ['contact'],   code: AD1 },
+    'banner-top':           { enabled: true, label: 'Advertisement', pages: ['home'],                              code: AD1 },
+    'banner-mid':           { enabled: true, label: 'Advertisement', pages: ['home'],                              code: AD1 },
+    'sidebar-top':          { enabled: true, label: 'Sponsored',     pages: ['home','product','category','thankyou'], code: AD2 },
+    'sidebar-bottom':       { enabled: true, label: 'Sponsored',     pages: ['home','product','category','thankyou'], code: AD2 },
+    'product-above':        { enabled: true, label: 'Advertisement', pages: ['product'],                           code: AD1 },
+    'product-in-article':   { enabled: true, label: 'Advertisement', pages: ['product'],                           code: AD1 },
+    'product-in-article-2': { enabled: true, label: 'Advertisement', pages: ['product'],                           code: AD1 },
+    'product-in-article-3': { enabled: true, label: 'Advertisement', pages: ['product'],                           code: AD1 },
+    'product-below':        { enabled: true, label: 'Advertisement', pages: ['product'],                           code: AD1 },
+    'category-banner':      { enabled: true, label: 'Advertisement', pages: ['category'],                          code: AD1 },
+    'category-mid':         { enabled: true, label: 'Advertisement', pages: ['category'],                          code: AD1 },
+    'thankyou-above':       { enabled: true, label: 'Advertisement', pages: ['thankyou'],                          code: AD1 },
+    'thankyou-banner':      { enabled: true, label: 'Advertisement', pages: ['thankyou'],                          code: AD2 },
+    'thankyou-below':       { enabled: true, label: 'Advertisement', pages: ['thankyou'],                          code: AD1 },
+    'contact-banner':       { enabled: true, label: 'Advertisement', pages: ['contact'],                           code: AD1 },
   },
 
   init() {

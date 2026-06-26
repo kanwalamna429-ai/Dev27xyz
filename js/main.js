@@ -385,6 +385,15 @@ const DEV27 = {
       });
     }
 
+    // More Like This
+    const related = this.products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
+    const mlt = document.getElementById('moreLikeThis');
+    const relGrid = document.getElementById('relatedGrid');
+    if (mlt && relGrid && related.length > 0) {
+      relGrid.innerHTML = related.map((p, i) => this.cardHTML(p, i)).join('');
+      mlt.style.display = '';
+    }
+
     const featImg = document.getElementById('featuredImage');
     if (featImg) featImg.src = product.featuredImage;
 

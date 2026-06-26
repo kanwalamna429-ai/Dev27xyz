@@ -94,72 +94,150 @@
   </div>
 </header>
 
-<!-- Thank You Content -->
-<div class="thankyou-page">
-  <div class="thankyou-card animate-in">
-    <div class="thankyou-icon">
-      <i class="fa-solid fa-circle-check"></i>
-    </div>
+<!-- Above-card Ad -->
+<div class="container" style="padding-top:24px;padding-bottom:4px">
+  <div class="ad-block in-content" data-ad-slot="thankyou-above"></div>
+</div>
 
-    <div class="thankyou-tag">✓ Download Complete</div>
-    <h1 class="thankyou-title">You're all set!<br>Happy building 🚀</h1>
-    <p class="thankyou-subtitle">Your template is downloading. If it doesn't start automatically, use the button below. We hope it helps you ship something awesome.</p>
+<!-- Main Layout -->
+<div class="container" style="padding-top:24px;padding-bottom:48px">
+  <div class="site-layout">
 
-    <!-- Product Recap -->
-    <div class="thankyou-product">
-      <img id="tyProductImg" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=144&q=80" alt="">
-      <div>
-        <h4 id="tyProductTitle">Your Template</h4>
-        <span id="tyProductCat">Free · Ready to use</span>
+    <!-- Main Column -->
+    <main>
+      <div class="thankyou-card animate-in" style="margin:0 0 24px">
+        <div class="thankyou-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="thankyou-tag">✓ Download Complete</div>
+        <h1 class="thankyou-title">You're all set!<br>Happy building 🚀</h1>
+        <p class="thankyou-subtitle">Your template is downloading. If it doesn't start automatically, use the button below. We hope it helps you ship something awesome.</p>
+
+        <!-- Product Recap -->
+        <div class="thankyou-product">
+          <img id="tyProductImg" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=144&q=80" alt="">
+          <div>
+            <h4 id="tyProductTitle">Your Template</h4>
+            <span id="tyProductCat">Free · Ready to use</span>
+          </div>
+        </div>
+
+        <!-- Tip Box -->
+        <div style="background:var(--bg);border-radius:var(--radius-sm);border:1.5px solid var(--border);padding:16px;margin-bottom:24px;text-align:left">
+          <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
+            <i class="fa-solid fa-lightbulb" style="color:var(--primary)"></i> Quick Start Tips
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
+              <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
+              Extract the ZIP and open <code style="font-family:var(--font-mono);font-size:12px;background:white;border:1px solid var(--border);padding:1px 6px;border-radius:4px">index.html</code> in your browser
+            </li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
+              <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
+              Check the <code style="font-family:var(--font-mono);font-size:12px;background:white;border:1px solid var(--border);padding:1px 6px;border-radius:4px">README.md</code> for full setup instructions
+            </li>
+            <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
+              <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
+              Deploy free on Cloudflare Pages, Netlify, or Vercel
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ad Slot: thankyou-banner — edit in js/ads.js -->
+        <div class="ad-block" style="margin-bottom:24px;text-align:center" data-ad-slot="thankyou-banner"></div>
+
+        <div class="thankyou-actions">
+          <a href="index.html" class="btn btn-back-home">
+            <i class="fa-solid fa-arrow-left"></i> Browse More Templates
+          </a>
+          <div style="display:flex;gap:8px">
+            <a href="#" id="shareX" class="social-btn tw" style="flex:1;text-decoration:none;justify-content:center;border-radius:var(--radius-sm);padding:10px 14px;font-size:13px" target="_blank" rel="noopener">
+              <i class="fa-brands fa-x-twitter"></i> Share on X
+            </a>
+            <a href="#" id="shareFb" class="social-btn fb" style="flex:1;text-decoration:none;justify-content:center;border-radius:var(--radius-sm);padding:10px 14px;font-size:13px" target="_blank" rel="noopener">
+              <i class="fa-brands fa-facebook-f"></i> Share
+            </a>
+          </div>
+        </div>
+
+        <p style="margin-top:20px;font-size:12px;color:var(--text-light);text-align:center">
+          Built with <span style="color:var(--primary)">♥</span> by <a href="https://dev27.xyz" style="color:var(--primary);font-weight:600">Dev27.xyz</a>
+        </p>
       </div>
-    </div>
 
-    <!-- Tip Box -->
-    <div style="background:var(--bg);border-radius:var(--radius-sm);border:1.5px solid var(--border);padding:16px;margin-bottom:24px;text-align:left">
-      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
-        <i class="fa-solid fa-lightbulb" style="color:var(--primary)"></i> Quick Start Tips
+      <!-- Below-card Ad -->
+      <div class="ad-block in-content" data-ad-slot="thankyou-below"></div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <!-- Ad Slot: sidebar-top -->
+      <div class="widget ad-widget-wrap">
+        <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-top"></div>
       </div>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
-        <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
-          <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
-          Extract the ZIP and open <code style="font-family:var(--font-mono);font-size:12px;background:white;border:1px solid var(--border);padding:1px 6px;border-radius:4px">index.html</code> in your browser
-        </li>
-        <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
-          <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
-          Check the <code style="font-family:var(--font-mono);font-size:12px;background:white;border:1px solid var(--border);padding:1px 6px;border-radius:4px">README.md</code> for full setup instructions
-        </li>
-        <li style="font-size:13px;color:var(--text-muted);display:flex;gap:8px;align-items:flex-start">
-          <i class="fa-solid fa-circle-check" style="color:var(--green);margin-top:2px;flex-shrink:0;font-size:11px"></i>
-          Deploy free on Cloudflare Pages, Netlify, or Vercel
-        </li>
-      </ul>
-    </div>
 
-    <!-- Ad Slot: thankyou-banner — edit in js/ads.js -->
-    <div class="ad-block" style="margin-bottom:24px;text-align:left" data-ad-slot="thankyou-banner"></div>
-
-    <div class="thankyou-actions">
-      <a href="index.html" class="btn btn-back-home">
-        <i class="fa-solid fa-arrow-left"></i> Browse More Templates
-      </a>
-      <div style="display:flex;gap:8px">
-        <a href="#" id="shareX" class="social-btn tw" style="flex:1;text-decoration:none;justify-content:center;border-radius:var(--radius-sm);padding:10px 14px;font-size:13px" target="_blank" rel="noopener">
-          <i class="fa-brands fa-x-twitter"></i> Share on X
-        </a>
-        <a href="#" id="shareFb" class="social-btn fb" style="flex:1;text-decoration:none;justify-content:center;border-radius:var(--radius-sm);padding:10px 14px;font-size:13px" target="_blank" rel="noopener">
-          <i class="fa-brands fa-facebook-f"></i> Share
-        </a>
+      <!-- Popular Templates -->
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Popular Templates</h3>
+        </div>
+        <div class="widget-body">
+          <div class="popular-list" id="popularList">
+            <div style="text-align:center;padding:16px;color:var(--text-muted);font-size:13px">Loading…</div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <p style="margin-top:20px;font-size:12px;color:var(--text-light);text-align:center">
-      Built with <span style="color:var(--primary)">♥</span> by <a href="https://dev27.xyz" style="color:var(--primary);font-weight:600">Dev27.xyz</a>
-    </p>
+      <!-- Follow Dev27 -->
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Follow Dev27</h3>
+        </div>
+        <div class="widget-body">
+          <div class="social-grid">
+            <a href="#" class="social-btn fb" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="#" class="social-btn tw" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+            <a href="#" class="social-btn li" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            <a href="#" class="social-btn rd" target="_blank" rel="noopener"><i class="fa-brands fa-reddit-alien"></i> Reddit</a>
+            <a href="#" class="social-btn ig" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-btn yt" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="widget">
+        <div class="widget-header">
+          <div class="widget-title-dot"></div>
+          <h3 class="widget-title">Newsletter</h3>
+        </div>
+        <div class="widget-body">
+          <form class="newsletter-form" action="https://dev27.us21.list-manage.com/subscribe/post" method="POST" target="_blank">
+            <p class="newsletter-desc">Get notified when new templates drop. No spam, ever.</p>
+            <input type="email" name="EMAIL" class="form-input" placeholder="your@email.com" required>
+            <input type="hidden" name="u" value="YOUR_MAILCHIMP_U">
+            <input type="hidden" name="id" value="YOUR_MAILCHIMP_ID">
+            <button type="submit" class="btn-subscribe"><i class="fa-solid fa-paper-plane"></i> Subscribe Free</button>
+            <div class="newsletter-success"><i class="fa-solid fa-circle-check"></i> You're subscribed! 🎉</div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Ad Slot: sidebar-bottom -->
+      <div class="widget ad-widget-wrap">
+        <div class="ad-block" style="border:none;border-radius:0" data-ad-slot="sidebar-bottom"></div>
+      </div>
+
+    </aside>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="site-footer" style="margin-top:0">
+<footer class="site-footer">
   <div class="container">
     <div class="footer-bottom">
       <div class="footer-bottom-left">© 2024 <a href="https://dev27.xyz">Dev27.xyz</a> · Made with <span>♥</span> by Dev27.xyz</div>

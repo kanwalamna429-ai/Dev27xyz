@@ -1084,3 +1084,16 @@ input, textarea { font-family: var(--font); }
   .share-btn span { display: none; }
   .share-btn { padding: 10px 13px; }
 }
+
+/* ── More Like This ─────────────────────────────────────────── */
+.more-like-this {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.more-like-this .products-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 0;
+}
