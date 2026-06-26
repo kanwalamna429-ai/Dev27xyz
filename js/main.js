@@ -386,7 +386,7 @@ const DEV27 = {
     }
 
     // More Like This
-    const related = this.products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
+    const related = this.products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
     const mlt = document.getElementById('moreLikeThis');
     const relGrid = document.getElementById('relatedGrid');
     if (mlt && relGrid && related.length > 0) {
@@ -471,6 +471,9 @@ const DEV27 = {
 
   /* ========= THANK YOU ========= */
   initThankYou() {
+    this.renderFooterStats();
+    this.renderPopularProducts();
+    this.initNewsletter();
     this.spawnConfetti();
     const raw = localStorage.getItem('lastDownload');
     if (!raw) return;
@@ -491,6 +494,20 @@ const DEV27 = {
       const fbBtn = document.getElementById('shareFb');
       if (xBtn) xBtn.href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
       if (fbBtn) fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+
+      // More Like This — find downloaded product by id, show 4 from same category
+      const downloaded = this.products.find(prod => prod.id === p.id);
+      if (downloaded) {
+        const related = this.products
+          .filter(prod => prod.category === downloaded.category && prod.id !== downloaded.id)
+          .slice(0, 4);
+        const mlt  = document.getElementById('tyMoreLike');
+        const grid = document.getElementById('tyMoreLikeGrid');
+        if (mlt && grid && related.length > 0) {
+          grid.innerHTML = related.map((prod, i) => this.cardHTML(prod, i)).join('');
+          mlt.style.display = '';
+        }
+      }
     } catch(e) {}
   },
 
